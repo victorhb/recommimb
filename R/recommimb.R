@@ -20,11 +20,10 @@
 #' @references
 #'
 #' @examples
-#' ## Extract all complexity measures using formula
-#' recommimb(Species ~ ., iris)
-#'
-#' ## Extract some complexity measures
-#' simulated(iris[1:4], iris[5], c("F2", "F3", "F4"))
+#' ## Recommend techniques using formula
+#' data(arsenic_female_bladder)
+#' recommimb(class ~ ., arsenic_female_bladder)
+#' 
 #' @export
 recommimb <- function(...) {
   UseMethod("recommimb")
