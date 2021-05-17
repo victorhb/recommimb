@@ -33,9 +33,6 @@ recommimb <- function(...) {
 #' @export
 recommimb.default <- function(x, y, top.list = 7, ...) {
   
-  #models = readRDS("RF_models1.rds")
-  #aux = readRDS("RF_models2.rds")
-  print(list.files(system.file('extdata', package = 'recommimb'), full.names = TRUE))
   models = readRDS(list.files(system.file('extdata', package = 'recommimb'), full.names = TRUE)[1])
   aux = readRDS(list.files(system.file('extdata', package = 'recommimb'), full.names = TRUE)[2])
   models = c(models, aux)
