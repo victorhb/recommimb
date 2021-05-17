@@ -33,7 +33,10 @@ recommimb <- function(...) {
 #' @export
 recommimb.default <- function(x, y, top.list = 7, ...) {
   
-  models = readRDS("RF_models.rds")
+  models = readRDS("RF_models1.rds")
+  aux = readRDS("RF_models2.rds")
+  models = c(models, aux)
+  aux = NULL
 
   if(!is.data.frame(x)) {
     stop("data argument must be a data.frame")
