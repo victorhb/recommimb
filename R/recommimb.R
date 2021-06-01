@@ -75,9 +75,10 @@ recommimb.default <- function(x, y, top.list = 7, ...) {
 
   #Renaming classes
   minority = names(which.min(table(y)))
-  majority = names(which.max(table(y)))
+  #majority = names(which.max(table(y)))
   minority_i = which(levels(y) == minority)
-  majority_i = which(levels(y) == majority)
+  #majority_i = which(levels(y) == majority)
+  majority_i = which(levels(y) != minority)
   levels(y)[c(minority_i,majority_i)] <- c("1","0")
  
   #Meta-features calculation
